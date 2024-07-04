@@ -1,0 +1,54 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15rem;
+    padding-top: 3rem;
+
+    @media screen and (max-width:1024px) {
+        gap: 6rem;
+    }
+
+    @media screen and (max-width:990px) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    @media screen and (max-width:576px) {
+
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width:576px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.headerBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+    @media screen and (max-width:990px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.link {
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-.5rem) scale(1.05);
+    }
+}

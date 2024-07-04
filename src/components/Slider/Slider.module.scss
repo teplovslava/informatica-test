@@ -1,0 +1,248 @@
+$hexagon-size: 300px;
+$hexagon-color: #ffffff;
+
+.container {
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    transform: rotate(-30deg) scale(calc(1 + 0.1 * cos(45)));
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+
+    @media screen and (max-width:576px) {
+        transform: rotate(-30deg) scale(1.15);
+    }
+
+    @media screen and (max-width:460px) {
+        transform: rotate(-30deg) scale(1.3);
+    }
+}
+
+.swiperSlide {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagonInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.visibleText {
+    opacity: 1;
+    scale: 1;
+    transition: all .4s ease-in-out;
+}
+
+.unvisibleText {
+    opacity: 0;
+    scale: 0;
+}
+
+.allTimeVisibleTextRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.allTimeVisibleTextCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+
+.hexagon {
+    transform: rotate(30deg) !important;
+    margin: 0 auto;
+
+
+    position: relative;
+    width: ($hexagon-size * 0.645);
+    height: $hexagon-size;
+    background-color: $hexagon-color;
+    border-radius: ($hexagon-size / 10);
+    transition: transform 400ms ease;
+    transform: rotate(-30deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    scale: 1;
+    transition: all .2s ease-in-out;
+
+
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    &:before {
+        transform: rotate(60deg);
+    }
+
+    &:after {
+        transform: rotate(-60deg);
+    }
+}
+
+.unvisible {
+    opacity: 0 !important;
+    scale: 0 !important;
+    transition: all .2s ease-in-out;
+}
+
+
+.time {
+    font-size: 2.4rem;
+
+    @media screen and (max-width:990px) {
+        font-size: 1.6rem;
+    }
+
+    @media screen and (max-width:576px) {
+        font-size: 1rem;
+    }
+}
+
+.date {
+    font-size: 3.4rem;
+
+    @media screen and (max-width:990px) {
+        font-size: 2.8rem;
+    }
+
+    @media screen and (max-width:787px) {
+        font-size: 1.8rem;
+    }
+
+    @media screen and (max-width:576px) {
+        font-size: 1.4rem;
+    }
+
+    @media screen and (max-width:460px) {
+        font-size: 1rem;
+    }
+
+}
+
+.buyButton {
+    border: .1rem solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+
+    @media screen and (max-width:990px) {
+        padding: .5rem;
+    }
+
+    @media screen and (max-width:787px) {
+        padding: .3rem;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width:576px) {
+        padding: .1rem;
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width:576px) {
+        font-size: 0.8rem;
+        border-radius: .3rem;
+    }
+
+    @media screen and (max-width:460px) {
+        font-size: 0.6rem;
+        border-radius: .3rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:1440px) {
+    $hexagon-size: 250px;
+
+    .hexagon {
+        width: ($hexagon-size * 0.645);
+        height: $hexagon-size;
+        background-color: $hexagon-color;
+        border-radius: ($hexagon-size / 10);
+    }
+}
+
+
+@media screen and (max-width:990px) {
+    $hexagon-size: 180px;
+
+    .hexagon {
+        width: ($hexagon-size * 0.645);
+        height: $hexagon-size;
+        background-color: $hexagon-color;
+        border-radius: ($hexagon-size / 10);
+    }
+}
+
+@media screen and (max-width:787px) {
+    $hexagon-size: 110px;
+
+    .hexagon {
+        width: ($hexagon-size * 0.645);
+        height: $hexagon-size;
+        background-color: $hexagon-color;
+        border-radius: ($hexagon-size / 10);
+    }
+}
+
+@media screen and (max-width:576px) {
+    $hexagon-size: 80px;
+
+    .hexagon {
+        width: ($hexagon-size * 0.645);
+        height: $hexagon-size;
+        background-color: $hexagon-color;
+        border-radius: ($hexagon-size / 10);
+    }
+}
+
+@media screen and (max-width:460px) {
+    $hexagon-size: 60px;
+
+    .hexagon {
+        width: ($hexagon-size * 0.645);
+        height: $hexagon-size;
+        background-color: $hexagon-color;
+        border-radius: ($hexagon-size / 10);
+    }
+}
