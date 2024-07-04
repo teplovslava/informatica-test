@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/informatica-test/static/css/main.e09a9cf7.css",
+    "main.js": "/informatica-test/static/js/main.a5406c38.js",
+    "index.html": "/informatica-test/index.html",
+    "main.e09a9cf7.css.map": "/informatica-test/static/css/main.e09a9cf7.css.map",
+    "main.a5406c38.js.map": "/informatica-test/static/js/main.a5406c38.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e09a9cf7.css",
+    "static/js/main.a5406c38.js"
+  ]
+}
