@@ -22,7 +22,9 @@ const Slider = ({ data, leftRef, rightRef, initialSlide }) => {
         slideToClickedSlide={true}
         slidesPerView={5}
         spaceBetween={50}
-        mousewheel={true}
+        mousewheel={{
+          invert:true
+        }}
         breakpoints={{
           1440: {
             coverflowEffect: {
